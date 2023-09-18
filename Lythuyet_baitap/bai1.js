@@ -1,5 +1,6 @@
 const http = require('http');
-const server = http.createServer((req, res) => {
+
+const app = http.createServer((req, res) => {
     // Xử lý yêu cầu ở đây
     if (req.method === 'GET' && req.url === '/') {
         // Lấy ngày tháng năm hiện tại
@@ -17,14 +18,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
-// Define port number as 3000
-const port = 8080;
-// Routes HTTP GET requests to the specified path "/" with the specified callback function
-app.get('/', function(request, response) {
-    response.send('Hello, World!');
-});
-
-// Make the app listen on port 3000
+const port = 8031;
 app.listen(port, function() {
     console.log('Server listening on http://localhost:' + port);
 });

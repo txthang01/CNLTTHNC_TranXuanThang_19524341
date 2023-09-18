@@ -1,9 +1,5 @@
 const express = require('express');
 const app = express();
-express()
-    .use('/api/v1/', greetMiddleware({ greeting: 'Hello world' }))
-    .listen(8080);
-
 
 // GET www.domain.com/myPath
 app.get('/myPath', function(req, res, next) {})

@@ -9,6 +9,6 @@ class GreetingService {
     }
 }
 express()
-    .use('/api/v1/service1', greetMiddleware({ service: new GreetingService('Hello'), }))
-    .use('/api/v1/service2', greetMiddleware({ service: new GreetingService('Hi'), }))
-    .listen(8080);
+    .use('/api/v1/service1', express({ service: new GreetingService('Hello'), }))
+    .use('/api/v1/service2', express({ service: new GreetingService('Hi'), }))
+    .listen(8878);
